@@ -45,9 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %build
 
 %install
-/bin/rm -rf $RPM_BUILD_ROOT
-(cd root   ;/usr/bin/find . -depth -print | /bin/cpio -dump $RPM_BUILD_ROOT)
-/bin/rm -f %{name}-%{version}-filelist
+rm -rf $RPM_BUILD_ROOT
+(cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
+rm -f %{name}-%{version}-filelist
 /sbin/e-smith/genfilelist $RPM_BUILD_ROOT > %{name}-%{version}-filelist
 
 
