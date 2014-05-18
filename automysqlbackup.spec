@@ -18,7 +18,7 @@ Requires:           e-smith-base, e-smith-release >= 9
 BuildRequires:      e-smith-devtools
 
 %description
-This RPM is an unofficial addon for the SME Server 8.x.  
+This RPM is an unofficial addon for the SME Server 9.x.  
 The target audience is the Linux/E-smith administrator 
 who wants to backup their mysql databases with an automatic way.
 This script is based on automysqlbackup V3.0
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 /bin/rm -rf $RPM_BUILD_ROOT
-(/usr/bin/find . -depth -print | /bin/cpio -dump $RPM_BUILD_ROOT)
+(cd root   ;/usr/bin/find . -depth -print | /bin/cpio -dump $RPM_BUILD_ROOT)
 /bin/rm -f %{name}-%{version}-filelist
 /sbin/e-smith/genfilelist $RPM_BUILD_ROOT > %{name}-%{version}-filelist
 
