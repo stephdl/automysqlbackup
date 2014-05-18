@@ -14,7 +14,7 @@ Source:             %{name}-%{version}.tar.gz
 URL:                http://sourceforge.net/projects/automysqlbackup/
 BuildRoot:          /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
-Requires:           e-smith-base, e-smith-release >= 8
+Requires:           e-smith-base, e-smith-release >= 9
 BuildRequires:      e-smith-devtools
 
 %description
@@ -26,6 +26,9 @@ This script is based on automysqlbackup V3.0
 
 
 %changelog
+* Sun May 18 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6.3
+- first release for sme9
+
 * Sun Oct 27 2013 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6.3
 - split the contrib in two versions smeserver-automysqlbackup and automysqlbackup
 
