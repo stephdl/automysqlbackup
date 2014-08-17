@@ -26,7 +26,7 @@ This script is based on automysqlbackup V3.0
 
 
 %changelog
-* Sun Aug 17 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6.'
+* Sun Aug 17 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-4
 - added my own patch against the --events warning
 --Warning: Skipping the data of table mysql.event. Specify the --events option explicitly.
 
