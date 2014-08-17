@@ -1,6 +1,6 @@
 %define name automysqlbackup
 %define version 3.0.RC6
-%define release 3
+%define release 4 
 %define rpmver   3.0.RC6
 
 
@@ -26,13 +26,10 @@ This script is based on automysqlbackup V3.0
 
 
 %changelog
-<<<<<<< HEAD
 * Sun Aug 17 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-4
 - added my own patch against the --events warning
 --Warning: Skipping the data of table mysql.event. Specify the --events option explicitly.
 
-=======
->>>>>>> parent of db28d1a... added my own patch against --events warning
 * Sun May 18 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6.3
 - first release for sme9
 
