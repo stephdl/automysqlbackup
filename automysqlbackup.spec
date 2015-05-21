@@ -1,6 +1,6 @@
 %define name automysqlbackup
 %define version 3.0.RC6
-%define release 4 
+%define release 5
 %define rpmver   3.0.RC6
 
 
@@ -14,18 +14,21 @@ Source:             %{name}-%{version}.tar.gz
 URL:                http://sourceforge.net/projects/automysqlbackup/
 BuildRoot:          /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
-Requires:           e-smith-base, e-smith-release >= 9
-BuildRequires:      e-smith-devtools
+Requires:           nethserver-mysql
+BuildRequires:      nethserver-devtools
 
 %description
-This RPM is an unofficial addon for the SME Server 9.x.  
-The target audience is the Linux/E-smith administrator 
+This RPM is an unofficial addon for the NethServer
+The target audience is the  administrator 
 who wants to backup their mysql databases with an automatic way.
 This script is based on automysqlbackup V3.0
 
 
 
 %changelog
+* Thu May 21 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-5
+- first version to Neth, added good require & build require
+
 * Sun Aug 17 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-4
 - added my own patch against the --events warning
 --Warning: Skipping the data of table mysql.event. Specify the --events option explicitly.
