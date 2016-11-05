@@ -1,6 +1,6 @@
 %define name automysqlbackup
 %define version 3.0.RC6
-%define release 5
+%define release 6
 %define rpmver   3.0.RC6
 
 
@@ -26,6 +26,9 @@ This script is based on automysqlbackup V3.0
 
 
 %changelog
+* Sat Nov 05 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-6.ns7
+- new rebuild for NS7
+
 * Thu May 21 2015 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-5
 - first version to Neth, added good require & build require
 
@@ -55,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 /bin/rm -rf $RPM_BUILD_ROOT
 (cd root   ;/usr/bin/find . -depth -print | /bin/cpio -dump $RPM_BUILD_ROOT)
 /bin/rm -f %{name}-%{version}-filelist
-/sbin/e-smith/genfilelist $RPM_BUILD_ROOT > %{name}-%{version}-filelist
+%{genfilelist} $RPM_BUILD_ROOT > %{name}-%{version}-filelist
 
 
 %files -f %{name}-%{version}-filelist
