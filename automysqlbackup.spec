@@ -1,6 +1,6 @@
 %define name automysqlbackup
 %define version 3.0.RC6
-%define release 6
+%define release 12
 %define rpmver   3.0.RC6
 
 
@@ -53,6 +53,10 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 
 %changelog
+* Sun NOv 29 2018 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-12.ns7
+- Dynamic path to the mysqldump binary (default is /usr/bin/mysqldump)
+- add in the config CONFIG_mysql_dump_binary='/usr/bin/mysqldump103'
+
 * Sat Nov 05 2016 Stephane de Labrusse <stephdl@de-labrusse.fr> 3.0.RC6-6.ns7
 - new rebuild for NS7
 
